@@ -13,120 +13,78 @@
 
 """Defines Bazel rules for running copyright checks and fixes."""
 
-load("@bazel_skylib//lib:paths.bzl", "paths")
-
-def _cr_impl(ctx):
+def copyright_checker(
+        name,
+        srcs,
+        visibility,
+        template = "//tools/cr_checker/resources:templates",
+        extensions = [],
+        offset = 0,
+        debug = False,
+        use_memory_map = False,
+        fix = False):
     """
-    Implementation function for the copyright rule. This function sets up the
-    necessary command to execute the Python script with the specified mode and source files.
+    Defines a custom build rule for checking and optionally fixing files for compliance
+    with specific requirements, such as copyright headers.
+
     Args:
-        ctx (RuleContext): The rule context containing attributes and configuration.
+        name (str): The name of the rule, used as an identifier in the build system.
+        srcs (list): A list of source file paths to check.
+        visibility (list): A list defining the visibility of the rule, specifying which
+                           targets can use this rule.
+        template (str, optional): Path to the template resource used for validation.
+                                  Defaults to "//tools/cr_checker/resources:templates".
+        extensions (list, optional): A list of file extensions to filter the source files.
+                                     Defaults to an empty list, meaning all files are checked.
+        offset (int, optional): The line offset for applying checks or modifications.
+                                Defaults to 0.
+        debug (bool, optional): Whether to enable debug mode, providing additional logs.
+                                Defaults to False.
+        use_memory_map (bool, optional): Whether to use memory mapping for large files to
+                                         improve performance. Defaults to False.
+        fix (bool, optional): Whether to apply fixes to files instead of just reporting issues.
+                                         Defaults to False.
+
     Returns:
-        DefaultInfo: Bazel default information provider with the output log file.
+        None: This function defines a rule for a build system and does not return a value.
     """
-    script = ctx.attr._script
-    files = []
+    t_names = [
+        "{}.check".format(name),
+        "{}.fix".format(name),
+    ]
 
-    files = ctx.files.srcs
-    extensions = ctx.attr.extensions
-
-    text_exts = ""
+    args = ["-t $(location {})".format(template)]
+    data = []
     if len(extensions):
-        text_exts = "-e {exts}".format(
-            exts = " ".join([exts for exts in ctx.attr.extensions]),
+        args.append("-e {exts}".format(
+            exts = " ".join([exts for exts in extensions]),
+        ))
+
+    if offset:
+        args.append("--offset {}".format(offset))
+
+    if debug:
+        args.append("-v")
+
+    if use_memory_map:
+        args.append("--use_memory_map")
+
+    for src in srcs:
+        args.append("$(locations {})".format(src))
+
+    for t_name in t_names:
+        if t_name == "{}.fix".format(name):
+            args.insert(0, "--fix")
+
+        native.py_binary(
+            name = t_name,
+            main = "cr_checker.py",
+            srcs = [
+                "//tools/cr_checker/tool:cr_checker_lib",
+            ],
+            args = args,
+            data = srcs + [
+                template,
+            ],
+            visibility = visibility,
         )
-
-    ctx.actions.write(
-        output = ctx.outputs.executable,
-        content = "{tool}.py -t {template} {extensions} {fix} {use_mmap} {debug} {log_file} {offset} {srcs}".format(
-            tool = script.files_to_run.executable.short_path,
-            template = ctx.file.template.path,
-            extensions = text_exts,
-            fix = "--fix" if ctx.attr.fix else "",
-            debug = "--verbose" if ctx.attr.debug else "",
-            use_mmap = "--use_memory_map" if ctx.attr.use_memory_map else "",
-            log_file = "--log-file log.txt" if ctx.attr.log_file else "",
-            offset = "--offset %s" % ctx.attr.offset if ctx.attr.offset else "",
-            srcs = " ".join([f.path for f in files]),
-        ),
-    )
-
-    runfiles = ctx.runfiles(
-        files = files + [ctx.file.template],
-    ).merge(
-        script.default_runfiles,
-    )
-    return [DefaultInfo(runfiles = runfiles)]
-
-_cr_rule = rule(
-    implementation = _cr_impl,
-    executable = True,
-    attrs = {
-        "srcs": attr.label_list(allow_files = True, mandatory = False, default = []),
-        "template": attr.label(allow_single_file = True),
-        "extensions": attr.string_list(mandatory = False, default = []),
-        "debug": attr.bool(mandatory = False, default = False),
-        "fix": attr.bool(mandatory = False, default = False),
-        "offset": attr.int(mandatory = False, default = 0),
-        "log_file": attr.bool(mandatory = False, default = False),
-        "use_memory_map": attr.bool(mandatory = False, default = False),
-        "_script": attr.label(
-            default = Label("//tools/cr_checker/tool:cr_checker"),
-        ),
-    },
-)
-
-def check(
-        name,
-        srcs,
-        visibility,
-        template = "//tools/cr_checker/resources:templates",
-        extensions = [],
-        offset = 0,
-        debug = False,
-        log_file = False,
-        use_memory_map = False):
-    """
-    Defines a Bazel target for checking files without modifying them.
-    Args:
-        name (str): The name of the target.
-        srcs (list of labels): The source files to check.
-    """
-    _cr_rule(
-        name = name,
-        srcs = srcs,
-        template = template,
-        offset = offset,
-        debug = debug,
-        log_file = log_file,
-        use_memory_map = use_memory_map,
-        visibility = visibility,
-    )
-
-def fix(
-        name,
-        srcs,
-        visibility,
-        template = "//tools/cr_checker/resources:templates",
-        extensions = [],
-        offset = 0,
-        debug = False,
-        log_file = False,
-        use_memory_map = False):
-    """
-    Defines a Bazel target for fixing files by adding missing copyright text.
-    Args:
-        name (str): The name of the target.
-        srcs (list of labels): The source files to fix.
-    """
-    _cr_rule(
-        name = name,
-        srcs = srcs,
-        template = template,
-        offset = offset,
-        debug = debug,
-        log_file = log_file,
-        use_memory_map = use_memory_map,
-        fix = True,
-        visibility = visibility,
-    )

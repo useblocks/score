@@ -11,6 +11,8 @@
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 
+load("//tools/cr_checker:cr_checker.bzl", "copyright_checker")
+
 test_suite(
     name = "format.check",
     tests = ["//tools/format:format.check"],
@@ -21,25 +23,16 @@ alias(
     actual = "//tools/format:format.fix",
 )
 
-alias(
-    name = "copyright.check",
-    actual = "//tools/cr_checker:copyright.check",
-)
-
-alias(
-    name = "copyright.fix",
-    actual = "//tools/cr_checker:copyright.fix",
-)
-
-filegroup(
-    name = "repo_directories",
+copyright_checker(
+    name = "copyright",
     srcs = [
+        ".github",
         "docs",
         "tools",
+        "//:BUILD",
+        "//:MODULE.bazel",
     ],
-    visibility = [
-        "//tools/cr_checker:__subpackages__",
-    ],
+    visibility = ["//visibility:public"],
 )
 
 exports_files([
