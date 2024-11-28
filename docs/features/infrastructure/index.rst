@@ -12,12 +12,26 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-Feature documentation
-=====================
+################
+ Infrastructure
+################
+
+***************
+ Documentation
+***************
+
+Description
+===========
+
+The infrastructure section describes the setup of the services and tools
+that are used for development.
+
+*************
+ Subfeatures
+*************
 
 .. toctree::
+   :titlesonly:
    :maxdepth: 1
-   :glob:
 
-   infrastructure/index.rst
-   integration/index.rst
+   config_as_code.rst
