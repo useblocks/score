@@ -18,6 +18,21 @@ Tool Requirements
 =================
 
 
+Integration tools
+-----------------
+
+
+.. tool_req:: Bazel for unified build, test and integration
+   :id: TOOL_REQ__BAZEL__unified_build_test_integration
+   :reqtype: Non-Functional
+   :security: NO
+   :safety: QM
+   :satisfies: STKH_REQ__INT_multi_repo_integration
+   :status: valid
+
+   Bazel shall be used for building, testing and integrating software.
+
+
 Process tools
 -------------
 
