@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 # *******************************************************************************
 # Copyright (c) 2024 Contributors to the Eclipse Foundation
 #
@@ -12,7 +10,6 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
-
 """The tool for checking if artifacts have proper copyright."""
 
 import argparse
@@ -278,7 +275,7 @@ def get_files_from_dir(directory, exts=None):
     collected_files = []
     LOGGER.debug("Getting files from directory: %s", directory)
     for path in directory.rglob("*"):
-        if path.is_file():
+        if path.is_file() and path.stat().st_size != 0:
             if exts is None or path.suffix[1:] in exts:
                 collected_files.append(path)
     return collected_files
@@ -536,16 +533,24 @@ def main(argv=None):
     LOGGER.info("Process completed.")
     LOGGER.info(
         "Total files without copyright: %s%d%s",
-        COLORS["GREEN"],
+        COLORS["RED"] if total_no > 0 else COLORS["GREEN"],
         total_no,
         COLORS["ENDC"],
     )
-    LOGGER.info(
-        "Total files that were fixed: %s%d%s",
-        COLORS["RED"] if total_fixes > 0 else COLORS["GREEN"],
-        total_fixes,
-        COLORS["ENDC"],
-    )
+    if args.fix:
+        total_not_fixed = total_no - total_fixes
+        LOGGER.info(
+            "Total files that were fixed: %s%d%s",
+            COLORS["GREEN"],
+            total_fixes,
+            COLORS["ENDC"],
+        )
+        LOGGER.info(
+            "Total files that were NOT fixed: %s%d%s",
+            COLORS["RED"] if total_not_fixed > 0 else COLORS["GREEN"],
+            total_not_fixed,
+            COLORS["ENDC"],
+        )
     LOGGER.info("=" * 64)
 
     return 0 if total_no == 0 else 1

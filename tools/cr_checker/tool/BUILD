@@ -11,8 +11,8 @@
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 
-py_binary(
-    name = "cr_checker",
+py_library(
+    name = "cr_checker_lib",
     srcs = [
         "cr_checker.py",
     ],
