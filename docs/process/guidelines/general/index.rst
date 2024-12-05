@@ -102,7 +102,7 @@ can be in a different order.
 
     platform-integration-tests/                     -> Integration tests on reference hardware.
 
-    process/process_model/                          -> process definition including workflows, workproducts, roles, guidance [WP_PROCESS_DEFINITION]
+    process/                                        -> process definition including workflows, workproducts, roles, guidance [WP_PROCESS_DEFINITION]
 
     registry/                                       -> infrastructure configuration
 
