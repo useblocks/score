@@ -23,7 +23,6 @@ from _extensions import metamodel
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "Score"
-copyright = "2024, Score"
 author = "Score"
 release = "0.1"
 

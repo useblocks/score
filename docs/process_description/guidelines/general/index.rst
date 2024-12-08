@@ -45,7 +45,7 @@ can be in a different order.
         platform_management_plan/                   -> Overall Platform Management Plan  [WP_PLATFORM_MGMT], consisting of ...
             project_management.rst                  -> ... Project Management.
             stakeholder_management.rst              -> ... Stakeholder Management.
-            safety_management.rst                   -> ... Safety Management incl. platform safety plan [WP_SAFETY_PLAN]
+            safety_management.rst                   -> ... Safety Management incl. platform safety plan [WP_PLATFORM_SAFETY_PLAN]
             risk_management.rst                     -> ... Risk Management.
             quality_management.rst                  -> ... Quality Management [WP_QMS].
             config_management.rst                   -> ... Configuration Management.
@@ -57,8 +57,8 @@ can be in a different order.
             software_development.rst                -> ... Development [WP_SW_DEV_PLAN].
             software_verification.rst               -> ... Verification [WP_VERIFICATION_PLAN].
             documentation_management.rst            -> ... Documentation Management.
-        release/                                    -> [WP_SW_RELEASE_NOTE]
-        safety/                                     -> safety documentation on platform level (SEooC): [WP_SW_FEAT_DFA], [WP_SW_SAFETY_MANUAL], [WP_SAFETY_CASE], [WP_CMR_REPORTS], [WP_ASSESSMENT_REPORT]
+        release/                                    -> [WP_PLATFORM SW_RELEASE_NOTE]
+        safety/                                     -> safety documentation on platform level (SEooC): [WP_SW_FEATURE_DFA], [WP_PLATFORM_SW_SAFETY_MANUAL], [WP_PLATFORM_SAFETY_CASE], [WP_CMR_REPORTS], [WP_ASSESSMENT_REPORT]
         stakeholder_requirements/                   -> Stakeholder requirements of the platform [WP_STAKEHOLDER_REQ].
 
     examples/                                       -> examples how a C++, Rust, Python module can be set up
@@ -79,8 +79,8 @@ can be in a different order.
         <module-name>/                              -> Folder containing all artifacts corresponding to one module.
             docs/                                   -> Documentation of the module consisting of ...
                 manual/                             -> ... Module manual, e.g. integration manual, assumptions of use and safety manual [WP_SW_AOU], [WP_SW_SAFTEY_MANUAL].
-                release/                            -> ... Module release note [WP_SW_RELEASE_NOTE] plus safety assessment [WP_ASSESSMENT_REPORT]
-                safety_plan/                        -> ... Module safety plan [WP_SAFETY_PLAN], module safety case [WP_SAFETY_CASE] and their conformance reviews [WP_CMR_REPORTS]
+                release/                            -> ... Module release note [WP_PLATFORM SW_RELEASE_NOTE] plus safety assessment [WP_ASSESSMENT_REPORT]
+                safety_plan/                        -> ... Module safety plan [WP_PLATFORM_SAFETY_PLAN], module safety case [WP_PLATFORM_SAFETY_CASE] and their conformance reviews [WP_CMR_REPORTS]
                 safety_analysis/                    -> ... Safety analysis on module level [WP_SW_COMP_DFA]
                 verification/                       -> ... Module verification report (reporting all module's components verifications) [WP_SW_VERIFICATION_REPORT] plus safety analysis conformance reviews [WP_CMR_REPORTS]
 
