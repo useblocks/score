@@ -17,7 +17,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 # from process.process_model_configuration import *
-from _extensions import metamodel
+from _extensions import metamodel, layouts
+
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -44,13 +45,57 @@ numfig = True
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = "alabaster"
+html_theme = "pydata_sphinx_theme"  #  "alabaster"
+html_static_path = ["_assets"]
+html_css_files = [
+    "css/score.css",
+    "css/score_needs.css",
+]
+
+html_theme_options = {
+    "header_links_before_dropdown": 3,
+    "external_links": [
+        {"name": "SCORE", "url": "https://eclipse-score.github.io"},
+        {
+            "name": "Eclipse",
+            "url": "https://projects.eclipse.org/projects/automotive.score",
+        },
+    ],
+    "icon_links": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/eclipse-score",
+            "icon": "fa-brands fa-github",
+            "type": "fontawesome",
+        }
+    ],
+    "use_edit_page_button": True,  # https://pydata-sphinx-theme.readthedocs.io/en/stable/user_guide/source-buttons.html#add-an-edit-button
+    "collapse_navigation": True,
+    "logo": {
+        "text": "Eclipse SCORE Docs",
+    },
+}
+
+html_context = {
+    # "github_url": "https://github.com", # or your GitHub Enterprise site
+    "github_user": "eclipse-score",
+    "github_repo": "score",
+    "github_version": "main",
+    "doc_path": "docs",
+}
+
 
 # -- sphinx-needs configuration --------------------------------------------
 
 needs_types = metamodel.needs_types
 needs_extra_options = metamodel.needs_extra_options
 needs_extra_links = metamodel.needs_extra_links
+
+# Setting the needs layouts
+needs_layouts = layouts.needs_layouts
+needs_global_options = {"collapse": True}
+needs_global_options = needs_global_options | layouts.needs_global_options
+
 
 # sphinx_needs configuration
 needs_id_required = True
