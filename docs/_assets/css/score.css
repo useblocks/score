@@ -110,6 +110,12 @@ blockquote {
     background-color: rgba(0,0,0,0.1);
 }
 
+/* Left sidebar fix, to hide scrollbar if not needed */
+.bd-sidebar-primary .sidebar-primary-items__end {
+    margin-bottom: 1em;
+    margin-top: 0;
+}
+
 /* SCORE Background video
    Source: https://www.imi21.com/background-video-full-screen.php */
 
