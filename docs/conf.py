@@ -31,6 +31,7 @@ release = "0.1"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
+    "sphinx_design",
     "sphinx_needs",
 ]
 
@@ -49,6 +50,7 @@ html_static_path = ["_assets"]
 html_css_files = [
     "css/score.css",
     "css/score_needs.css",
+    "css/score_design.css",
 ]
 
 html_theme_options = {

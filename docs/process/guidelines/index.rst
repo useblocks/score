@@ -12,7 +12,7 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _Guidelines:
+.. _configuration_tool_guidelines:
 
 ###########
  Guidelines
