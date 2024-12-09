@@ -14,8 +14,8 @@
 
 .. _Process_description:
 
-Process description
-===================
+Process
+=======
 
 Processes are the basis to describe the way of working within the SCORE project.
 

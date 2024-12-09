@@ -65,7 +65,7 @@ Steering of the project is done by two committees: *project lead circle* and *te
   * High-level project control and coordination between multiple software modules.
   * Escalation instance for software module project leads and committers.
 
-  *Technical lead circle* proposes and elects a *Technical lead circle Assistant* and his deputy with bare majority, who is responsible for scheduling and announcing meetings, preparing and announcing agenda, writing meeting minutes and protocols. *Technical lead circle* can reelect *Technical lead circle Assistant* at any time. The *Technical lead circle Assistant* and his deputy can resign anytime on their own will.
+  *Technical lead circle* proposes and elects a *Technical lead circle Assistant* and his deputy with bare majority during *Technical Lead Circle meeting*, who is responsible for scheduling and announcing meetings, preparing and announcing agenda, writing meeting minutes and protocols. *Technical lead circle* can reelect *Technical lead circle Assistant* at any time. The *Technical lead circle Assistant* and his deputy can resign anytime on their own will.
 
 Technical committees
 --------------------
@@ -100,7 +100,7 @@ Technical committees
 
   *Cross-functional team* usually consists of the following roles: Project Lead, Safety Manager, Quality Manager, Security Manager, Committers and Contributors. Every *cross-functional* team has at least one committer who can approve and merge the Pull Requests of the Contributors.
 
-  In case *Cross-functional team* needs to request a new repository, this can be done be extending the `otterdog configuration file <https://github.com/eclipse-score/.eclipsefdn/blob/main/otterdog/eclipse-score.jsonnet>`_ and creating a new PR, that should be approved by the *Project Leads*.
+  In case *Cross-functional team* needs to request a new repository, this can be done be extending the `otterdog configuration file <https://github.com/eclipse-score/.eclipsefdn/blob/main/otterdog/eclipse-score.jsonnet>`_ and creating a new PR, that should be approved by the *Eclipse Project Security Team*.
 
 
 Meeting Structure
@@ -110,7 +110,7 @@ Meeting Structure
 
   Regular participants of *Project Lead Circle meeting* are the *Project Leads* and *Technical Leads* of the main *SCORE* project. The main purpose of the meeting is the exchange between *Project Leads* and the reporting of the *Technical Lead Circle* to the *Project Lead Circle* and vice versa.
 
-  The *Project Lead Circle meetings* are announced via *score-dev@eclipse.org* mailing list and are open for everyone who is registered to this mailing list. All meetings are documented as GitHub Discussions in `Project Lead Circle section <https://github.com/orgs/eclipse-score/discussions/categories/project-lead-circle>`_ and can be read by everyone. Topics for the *Project lead circle meetings* can be proposed only by regular participants and will be prioritized by the *Project lead circle Assistant*. Proposals for agenda topics can be added as comment to the respective GitHub discussion or sent to the *Project lead circle Assistant*.
+  The *Project Lead Circle meetings* are announced via *score-dev@eclipse.org* mailing list and are open for everyone who is registered to this mailing list. All meetings are documented as *GitHub Discussions* in `Project Lead Circle section <https://github.com/orgs/eclipse-score/discussions/categories/project-lead-circle>`_ and can be read by everyone. Topics for the *Project lead circle meetings* can be proposed only by regular participants and will be prioritized by the *Project lead circle Assistant*. Proposals for agenda topics can be added as comment to the respective *GitHub Discussion* or sent to the *Project lead circle Assistant*.
 
   Open points from the meetings will be handled by *GitHub Issues* in the *SCORE* main repository and can be filtered via *project_lead_circle* label.
 
@@ -163,7 +163,7 @@ as defined by the *Eclipse Foundation Project Handbook*. Software module committ
 and software module project leads are responsible for managing the software module as if it were
 a normal *Eclipse child project*. The election of the project leads and committers for software module projects should be done using the main integration *SCORE* project mailing list, *score-dev@eclipse.org*. This means, that the decision who will be the project lead and committer of the new software module will be taken by the project leads and committers of the main *SCORE* project respectively. The elected project leads or committers of the software modules are not automatically project leads and committers of the main integration *SCORE* project. Typically, before becoming a project lead or a committer of the main integration *SCORE* project, you need to build up a good reputation by contributing to the main integration *SCORE* project and being project lead or committer for one of the software modules.
 
-That should be a normal procedure, that before introducing a new *Eclipse child project* for a software module, it should first reside as a repository in the main *SCORE* project. If the software module later would be moved to a real standalone *Eclipse child project*, e.g., as there is a wish to use this software module independent of the *SCORE* project, then the elected project leads and committers of the software module will be simply taken over as project leads and committers of the new *Eclipse child project* and their tasks will stay the same. Further in this document differentiation between a software module and  *Eclipse child project* will be done only if necessary. For the software module that resides in the separate repository of the main *SCORE* project, the configuration and the control
+Before introducing a new *Eclipse child project* for a software module, it should first reside as a repository in the main *SCORE* project. If the software module later would be moved to a real standalone *Eclipse child project*, e.g., as there is a wish to use this software module independent of the *SCORE* project, then the elected project leads and committers of the software module will be simply taken over as project leads and committers of the new *Eclipse child project* and their tasks will stay the same. Further in this document differentiation between a software module and  *Eclipse child project* will be done only if necessary. For the software module that resides in the separate repository of the main *SCORE* project, the configuration and the control
 of who is committer and project lead is done using
 `CODEOWNER files <https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners>`_
 located in the subfolder of the corresponding repository of the software module.

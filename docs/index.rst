@@ -12,15 +12,34 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
+.. raw:: html
+
+   <div style="visibility: hidden;height:0px;">
+
 Documentation
 =============
 
+.. raw:: html
+
+   </div>
+
+.. raw:: html
+
+   <div id="videowrapper">
+      <div id="fullScreenDiv">
+         <div id="score-title">
+               Eclipse SCORE
+               <span id="score-subtitle">Eclipse Safe Open Vehicle Core</span>
+               <span id="score-phrase">Software Documentation</span>
+         </div>
+      </div>
+   </div>
+
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :glob:
 
-   stakeholder_requirements/index.rst
-   tool_requirements/index.rst
-   process/index.rst
-   features/index.rst
+   requirements/index
+   features/index
+   process/index
    platform_management_plan/index.rst

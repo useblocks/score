@@ -12,14 +12,10 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _Platform_Features:
-
-Features
-========
+Requirements
+============
 
 .. toctree::
-   :maxdepth: 1
-   :glob:
 
-   infrastructure/index.rst
-   integration/index.rst
+   stakeholder/index
+   tool/index
