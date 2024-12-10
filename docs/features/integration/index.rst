@@ -73,9 +73,13 @@ Bazel module, which can be integrated via an additional dependency in the main
 build.
 
 If a repo has reached this state and the concept is approved in general the
-content can be used as input for the `score` repository, where the development
-according to the defined process happens. In this stage the content
-shall still be disabled via a Bazel `feature flag` with the following
+content can be used as input for the score production repositories.
+
+This means that the existing code can be transferred to the production
+repositories as copy via the contribution process. The incubation
+repository will be archived at this point in time.
+
+The content shall be disabled via a Bazel `feature flag` with the following
 naming convention `//experimental_[feature]`.
 The `experimental` prefix indicates to the user that
 this functionality is not yet ready for series production.
