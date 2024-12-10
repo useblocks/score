@@ -58,6 +58,30 @@ Optional repositories:
 
 -  repositories containing implementation of particular features
 
+Incubation repositories
+=======================
+
+For early evaluation of existing implementations and prototypes we introduce
+so called `incubation repositories`.
+They should serve as a prototyping area where developers can share and build
+code with only limited restrictions such as quality KPIs, review processes, etc.
+
+Incubation repositories are indicated by the prefix `inc_` in the repo name.
+
+Any incubation repository shall evolve over time towards a fully functional
+Bazel module, which can be integrated via an additional dependency in the main
+build.
+
+If a repo has reached this state and the concept is approved in general the
+content can be used as input for the `score` repository, where the development
+according to the defined process happens. In this stage the content
+shall still be disabled via a Bazel `feature flag` with the following
+naming convention `//experimental_[feature]`.
+The `experimental` prefix indicates to the user that
+this functionality is not yet ready for series production.
+Additionally the relevant code might not meet all required quality KPIs.
+
+
 References
 ==========
 
