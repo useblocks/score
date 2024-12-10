@@ -96,7 +96,7 @@ Technical committees
 
   *Cross functional teams* are responsible for some piece
   of work from the beginning (e.g. definition of the architecture) till the end
-  (e.g. integration tests) and are usually assigned to the *SCORE* main integration project or to one particular software module. *Cross-functional teams* work independently from each other on *GitHub* issues in the assigned software module. *Cross-functional teams* consist of the contributors, who can specify requirements, define architecture, develop source code and implement tests afterwards. *Project Leads* and *Committers* are also *Contributors* and effectively work on processing of *GitHub* issues.
+  (e.g. integration tests) and are usually assigned to the *SCORE* main integration project or to one particular software module. *Cross-functional teams* work independently from each other on *GitHub Issues* in the assigned software module. *Cross-functional teams* consist of the contributors, who can specify requirements, define architecture, develop source code and implement tests afterwards. *Project Leads* and *Committers* are also *Contributors* and effectively work on processing of *GitHub Issues*.
 
   *Cross-functional team* usually consists of the following roles: Project Lead, Safety Manager, Quality Manager, Security Manager, Committers and Contributors. Every *cross-functional* team has at least one committer who can approve and merge the Pull Requests of the Contributors.
 
@@ -120,17 +120,17 @@ Meeting Structure
 
   Regular participants of the *Technical Lead Circle meeting* are the *Technical Leads* of the main *SCORE* project. The main purpose of the meeting is the exchange between technical leads for fulfilling their responsibilities.
 
-  The *Technical Lead Circle meetings* are announced via *score-dev@eclipse.org* mailing list and are open for everyone who is registered to this mailing list. All meetings are documented as *GitHub Discussions* in `Technical Lead Circle section <https://github.com/orgs/eclipse-score/discussions/categories/technical-lead-circle>`_ and can be read by everyone. Topics for the *Technical lead circle meetings* can be proposed only by regular participants and will be prioritized by the *Technical lead circle Assistant*. Proposals for agenda topics can be added as comment to the respective GitHub discussion or sent to the *Technical lead circle Assistant*.
+  The *Technical Lead Circle meetings* are announced via *score-dev@eclipse.org* mailing list and are open for everyone who is registered to this mailing list. All meetings are documented as *GitHub Discussions* in `Technical Lead Circle section <https://github.com/orgs/eclipse-score/discussions/categories/technical-lead-circle>`_ and can be read by everyone. Topics for the *Technical lead circle meetings* can be proposed only by regular participants and will be prioritized by the *Technical lead circle Assistant*. Proposals for agenda topics can be added as comment to the respective *GitHub Discussion* or sent to the *Technical lead circle Assistant*.
 
-  Open points from the meetings will be handled by GitHub Issues in the *SCORE* main repository and can be filtered via label *technical_lead_circle*.
+  Open points from the meetings will be handled by *GitHub Issues* in the *SCORE* main repository and can be filtered via label *technical_lead_circle*.
 
   The *Technical Lead Circle meeting* takes place usually once a week.
 
 * **Committer Circle Meeting**
 
-  Regular participants of the *Committer Circle meeting* are the *Committers* of the main *SCORE* project and of all software modules/child projects. The *Committer Circle Meeting* is lead by the *Technical Leads*. The main purpose of the meeting are in-depth technical discussions and evaluation of the *Contribution Requests*.
+  Regular participants of the *Committer Circle meeting* are the *Committers* of the main *SCORE* project and of all software modules/child projects. The *Committer Circle Meeting* is lead by the *Technical Leads*. The main purpose of the meeting are in-depth technical discussions and evaluation of the *Contribution Requests*, that could not be approved in the *Technical Lead Circle meeting* and demand more technical discussions.
 
-  The *Committer Circle meetings* are announced via *score-dev@eclipse.org* mailing list and are open for everyone who is registered to this mailing list. All meetings are documented as GitHub Discussions in `Committer Circle section <https://github.com/orgs/eclipse-score/discussions/categories/committer-circle>`_ and can be read by everyone. Topics for the *Committer circle meetings* can be proposed only by regular participants and will be prioritized by the *Technical lead circle*. Proposals for agenda topics can be added as comment to the respective GitHub discussion or sent to the *Technical lead circle Assistant*.
+  The *Committer Circle meetings* are announced via *score-dev@eclipse.org* mailing list and are open for everyone who is registered to this mailing list. All meetings are documented as *GitHub Discussions* in `Committer Circle section <https://github.com/orgs/eclipse-score/discussions/categories/committer-circle>`_ and can be read by everyone. Topics for the *Committer circle meetings* can be proposed only by regular participants and will be prioritized by the *Technical lead circle*. Proposals for agenda topics can be added as comment to the respective *GitHub Discussion* or sent to the *Technical lead circle Assistant*.
 
   The *Committer Circle meeting* takes place on demand. The decision for the scheduling of the *Committer Circle Meeting* is taken by the *Technical Lead Circle*.
 
