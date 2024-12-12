@@ -43,3 +43,4 @@ Documentation
    features/index
    process/index
    platform_management_plan/index.rst
+   score_releases/index.rst
