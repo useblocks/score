@@ -12,18 +12,5 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _Platform_Features:
-
-Features
-========
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   infrastructure/index.rst
-   integration/index.rst
-   analysis-infra/index.rst
-   communication/index.rst
-   frameworks/index.rst
-   persistency/index.rst
+Key-value Storage
+#################
