@@ -19,6 +19,17 @@ Process
 
 Processes are the basis to describe the way of working within the SCORE project.
 
+Guidelines
+----------
+
+The guidelines for the SCORE project can be found here:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   guidelines/index.rst
+
 Roles
 -----
 Persons are assigned to roles and these describe the person's activities within a workflow.
@@ -46,17 +57,3 @@ Requirements templates
    :glob:
 
    templates/index.rst
-
-Configuration/Tool management
------------------------------
-
-Important from the begin are version control topics, like commit rules and naming conventions for branches.
-
-Configuration/Tool guidelines
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   guidelines/index.rst
