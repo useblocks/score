@@ -19,6 +19,21 @@ Process
 
 Processes are the basis to describe the way of working within the SCORE project.
 
+Roles
+-----
+Persons are assigned to roles and these describe the person's activities within a workflow.
+Especially if the role is responsible for performing, approving or supporting a workflow.
+This is realized by the respective links between role and workflow.
+
+Role definition
+~~~~~~~~~~~~~~~
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   roles/index.rst
+
 Requirements engineering
 ------------------------
 A key process is the Requirements engineering, which is for defining, documenting, and maintaining requirements within our SCORE project.
