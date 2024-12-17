@@ -40,3 +40,16 @@ Platform Management Plan
    :caption: Content
 
    project_management
+   stakeholder_management
+   safety_management
+   risk_management
+   quality_management
+   config_management
+   tool_management
+   release_management
+   problem_resolution
+   change_management
+   requirements_management
+   software_verification
+   documentation_management
+   software_development
