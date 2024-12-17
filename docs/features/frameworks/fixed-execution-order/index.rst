@@ -12,5 +12,5 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-Fixed order execution Framework
+Fixed execution order framework
 ###############################

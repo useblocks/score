@@ -18,4 +18,4 @@ Frameworks
 
 .. toctree::
 
-   fixed-order-execution/index.rst
+   fixed-execution-order/index.rst
