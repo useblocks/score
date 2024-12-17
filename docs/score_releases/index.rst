@@ -44,37 +44,44 @@ SW Module List
      - Date
      - Contribution Request
      - Repo
+     - GitHub Discussions
    * - IPC
      - Holger Grandy, Gerd Schaeffer, Nico Hartmann, Sven Kappel, Thilo Schmitt
      - v0.5
      - Q4
      - _
      - `inc_mw_com <https://github.com/eclipse-score/inc_mw_com>`_
+     - `Communication CTF <https://github.com/orgs/eclipse-score/discussions/categories/communication-cft>`_
    * - Fixed Execution Order Framework (incl. Orchestrator)
      - Holger Grandy, Gerd Schaeffer, Nico Hartmann, Sven Kappel, Thilo Schmitt
      - v0.5
      - Q4
      - _
      - `inc_feo <https://github.com/eclipse-score/inc_feo>`_
+     - `FEO CTF <https://github.com/orgs/eclipse-score/discussions/categories/feo-cft>`_
    * - Logging
      - Holger Grandy, Gerd Schaeffer, Nico Hartmann
      - v0.5
      - Q4
      - _
      - `inc_mw_log <https://github.com/eclipse-score/inc_mw_log>`_
+     - `Logging CTF <https://github.com/orgs/eclipse-score/discussions/categories/logging-cft>`_
    * - Persistency
      - Gerd Schaeffer, Nico Hartmann, Sven Kappel
      - v0.5
      - Q4
      - _
      - `inc_mw_per <https://github.com/eclipse-score/inc_mw_per>`_
+     - `Persistency CTF <https://github.com/orgs/eclipse-score/discussions/categories/persistency-cft>`_
    * - Integration Testing Framework
      - Holger Grandy
      - v0.5
      - Q4
      - _
      - _
+     - _
    * - SOME/IP
+     - _
      - _
      - _
      - _
@@ -86,7 +93,9 @@ SW Module List
      - _
      - _
      - _
+     - _
    * - Diagnosis
+     - _
      - _
      - _
      - _
@@ -98,13 +107,16 @@ SW Module List
      - _
      - _
      - _
+     - _
    * - Time Sync
      - _
      - _
      - _
      - _
      - _
+     - _
    * - Firewall
+     - _
      - _
      - _
      - _

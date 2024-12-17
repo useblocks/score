@@ -77,14 +77,14 @@ Technical committees
   is to do a breakdown of platform sagas to the concrete tasks (see `Planning`_) .
   Currently following *Communities* are defined in the *SCORE* project:
 
-  * *Tooling/Infrastructure*: *community* for all kind of infra topics:
-    compiler, IDE, build toolchain and etc.
+  * *Operational*: *community* for all kind of infra topics:
+    compiler, IDE, build toolchain and etc. See `GitHub Discussions/Operational Community  <https://github.com/orgs/eclipse-score/discussions/categories/operational-community>`_ for more.
   * *Testing*: *community* to clarify questions and define testing strategy
-    for the 'SCORE' project
+    for the 'SCORE' project. See `GitHub Discussions/Testing Community <https://github.com/orgs/eclipse-score/discussions/categories/testing-community>`_ for more.
   * *Software Architecture*: *community* for clarification of software architecture topics,
-    e.g. discussion of new features or coding guidelines.
+    e.g. discussion of new features or coding guidelines. See `GitHub Discussions/Architecture Community <https://github.com/orgs/eclipse-score/discussions/categories/architecture-community>`_ for more.
   * *Software Development Process*: *community* for definition and maintaining
-    of safety, security and quality software development process.
+    of safety, security and quality software development process. See `GitHub Discussions/SW Dev Process Community <https://github.com/orgs/eclipse-score/discussions/categories/sw-dev-process-community>`_ for more.
 
   The planning of the activities is done by every *Community* independent of other
   teams. Each *Community* has a *Community Lead*, who is nominated by the *Technical lead circle*. The prioritization of some topics can be requested by the *Technical lead circle*
@@ -101,6 +101,7 @@ Technical committees
 
   In case *Cross-functional team* needs to request a new repository, this can be done be extending the `otterdog configuration file <https://github.com/eclipse-score/.eclipsefdn/blob/main/otterdog/eclipse-score.jsonnet>`_ and creating a new PR, that should be approved by the *Eclipse Project Security Team*.
 
+  The *GitHub Discussions* for cross-functional teams can be found in the `Cross-functional teams section <https://github.com/orgs/eclipse-score/discussions>`_ of the main *SCORE* project.
 
 Meeting Structure
 -----------------
@@ -114,6 +115,7 @@ Meeting Structure
   Open points from the meetings will be handled by *GitHub Issues* in the *SCORE* main repository and can be filtered via *project_lead_circle* label.
 
   The *Project Lead Circle meeting* takes place usually once a week.
+
 
 * **Technical Lead Circle meeting**
 
