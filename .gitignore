@@ -4,3 +4,13 @@ MODULE.bazel.lock
 
 # Ruff
 .ruff_cache
+
+# Python
+.venv
+
+# Vale - editorial style guide
+.vale.ini
+styles/
+
+# direnv - folder-specific bash configuration
+.envrc
